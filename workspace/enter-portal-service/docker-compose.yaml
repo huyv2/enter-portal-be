@@ -1,0 +1,17 @@
+version: "3"
+services:
+   enter-portal:
+      image: enter-portal-be:0.0.1
+      build:
+         context: ./
+         dockerfile: Dockerfile
+         args:
+            buildno: 1
+      ports:
+         - 2888:2888
+      volumes:
+         - /home/huyvv/working/log/:/./log
+      restart: always
+      network_mode: bridge
+      environment:
+         TARGET_PORT: 2888

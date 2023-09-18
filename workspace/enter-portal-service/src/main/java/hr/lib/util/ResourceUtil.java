@@ -39,7 +39,7 @@ public class ResourceUtil {
 		}
 	}
 
-	private static String getRealValue(String value){
+	private static String getRealValue(String value) {
 		String realValue = value;
 
 		if (value != null && value.startsWith("$@")){
